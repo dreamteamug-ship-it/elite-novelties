@@ -1,13 +1,8 @@
 {
   "version": 2,
+  "framework": "nextjs",
   "functions": {
-    "app/api/webhooks/**/*": {
-      "maxDuration": 60
-    },
-    "app/api/fulfillment/**/*": {
-      "maxDuration": 60
-    },
-    "app/api/checkout/verify-usdt/**/*": {
+    "app/api/**/*": {
       "maxDuration": 60
     }
   },
@@ -15,18 +10,10 @@
     {
       "source": "/api/webhooks/(.*)",
       "headers": [
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        },
-        {
-          "key": "Access-Control-Allow-Methods",
-          "value": "POST, OPTIONS"
-        },
-        {
-          "key": "Access-Control-Allow-Headers",
-          "value": "Content-Type, stripe-signature, Authorization"
-        }
+        { "key": "Access-Control-Allow-Credentials", "value": "true" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET,OPTIONS,PATCH,DELETE,POST,PUT" },
+        { "key": "Access-Control-Allow-Headers", "value": "X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version, stripe-signature, Authorization" }
       ]
     }
   ]
