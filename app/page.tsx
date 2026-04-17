@@ -1,11 +1,10 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import { supabase } from '@/lib/supabase';
 import CashCloudCheckout from './components/CashCloudCheckout';
 
 export default function LuxuryStorefront() {
-  const supabase = createClientComponentClient();
   const [showCheckout, setShowCheckout] = useState(false);
   const [cartTotal, setCartTotal] = useState(0);
   const [selectedProduct, setSelectedProduct] = useState<string | null>(null);

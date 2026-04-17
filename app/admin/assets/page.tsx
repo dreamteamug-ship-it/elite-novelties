@@ -1,10 +1,9 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import { createClientComponentClient } from '@supabase/auth-helpers-nextjs';
+import { supabase } from '@/lib/supabase';
 
 export default function CTOCommandCenter() {
-  const supabase = createClientComponentClient();
   const [logs, setLogs] = useState<any[]>([]);
   const [pendingProducts, setPendingProducts] = useState<any[]>([]);
   const [loading, setLoading] = useState(false);
