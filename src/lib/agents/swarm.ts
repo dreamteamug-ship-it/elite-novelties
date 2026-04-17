@@ -2,8 +2,8 @@ import { createClient } from '@supabase/supabase-js';
 
 // Initialize Supabase Client (Server Side)
 const supabase = createClient(
-  process.env.NEXT_PUBLIC_SUPABASE_URL!,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
+  process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://kalmqxjghhpgqymtdxze.supabase.co',
+  process.env.SUPABASE_SERVICE_ROLE_KEY || 'dummy_key'
 );
 
 export interface SwarmProduct {

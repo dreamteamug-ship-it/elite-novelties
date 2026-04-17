@@ -1,12 +1,12 @@
 import { createClient } from '@supabase/supabase-js';
 
 // Automatically inject https:// if the user forgot it in their Vercel ENV
-let supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+let supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://kalmqxjghhpgqymtdxze.supabase.co';
 if (supabaseUrl && !supabaseUrl.startsWith('http')) {
   supabaseUrl = `https://${supabaseUrl}`;
 }
 
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'dummy_key';
 
 // Client for use in the browser (respects RLS)
 export const supabase = createClient(supabaseUrl, supabaseAnonKey);
@@ -17,5 +17,5 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey);
  */
 export const supabaseAdmin = createClient(
   supabaseUrl,
-  process.env.SUPABASE_SERVICE_ROLE_KEY!
+  process.env.SUPABASE_SERVICE_ROLE_KEY || 'dummy_key'
 );
