@@ -1,0 +1,16 @@
+{
+  "name": "Elite Novelties | CashCloud Mirror",
+  "short_name": "Elite",
+  "description": "Ultra-Luxury E-commerce & Mirror Settlement Platform",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#050505",
+  "theme_color": "#D4AF37",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

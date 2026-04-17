@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: 'Elite Novelties | Luxury CashCloud Platform',
   description: 'Ultra-luxury wellness and mirror payment settlement.',
   manifest: '/manifest.json',
+}
+
+export const viewport = {
   themeColor: '#0B1426',
 }
 

@@ -1,11 +1,14 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --foreground-rgb: 240, 234, 214;
   --background-start-rgb: 5, 5, 5;
   --background-end-rgb: 11, 20, 38;
+}
+
+@theme {
+  --color-foreground: rgb(var(--foreground-rgb));
+  --color-background: rgb(var(--background-start-rgb));
 }
 
 body {
@@ -19,8 +22,6 @@ body {
   overflow-x: hidden;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+@utility text-balance {
+  text-wrap: balance;
 }
